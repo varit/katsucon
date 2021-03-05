@@ -8,7 +8,7 @@ _**Katsucon** MVP includes well designed and organized information about a conve
 
 ### Features
 
-- Admin portal for updating site information: Images, dates and text
+- Manage guests attending: Add/remove guests by their first, last and perffered name, as well as specifying attending dates
 - Fully mobile and desktop responsive 
 
 ### Goals
