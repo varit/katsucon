@@ -71,7 +71,6 @@ https://whimsical.com/WoQc7po5fttTupVGVcSLZT
 #### ERD Model
 
 https://drive.google.com/file/d/1iwTVGhp8d7ZIeQntLyXolCaHKopJWP7p/view?usp=sharing
-
 <br>
 
 ***
