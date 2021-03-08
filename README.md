@@ -1,19 +1,23 @@
-## Katsucon
+## Waterfall
 
 ## MVP
 
-_**Katsucon** MVP includes well designed and organized information about a convention that can be easily update or remove to reflect real time event data._
+_**Waterfall** MVP includes the ability for user to sign into the app, share their "thoughts" and favorite other peoples "thoughts"_
 
 <br>
 
 ### Features
 
-- Manage guests attending: Add/remove guests by their first, last and perffered name, as well as specifying attending dates
+- Post "thoughts"
+- Favorite peoples "thoughts"
+- Waterfall like feeds displaying "thoughts"
+- Sign Up
+- Sign/Log In/Out
 - Fully mobile and desktop responsive 
 
 ### Goals
 
-- Creating a web app that can be updated easily regardless of users technology experience
+- Creating a web app that can be used alternatively to note apps
 
 ### Challenges
 
@@ -39,7 +43,7 @@ _**Katsucon** MVP includes well designed and organized information about a conve
 
 #### Wireframes
 
-https://xd.adobe.com/view/cb2558ee-765b-4d69-b40f-93b551c4c99f-9e76/?fullscreen
+https://xd.adobe.com/view/1efb68eb-653c-4c8e-9ae6-03cb7d8c3378-4ba8/?fullscreen
 
 #### Component Tree
 
