@@ -28,8 +28,6 @@ _**Waterfall** MVP includes the ability for user to sign into the app, share the
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Front-end framework._ |
@@ -46,8 +44,6 @@ _**Waterfall** MVP includes the ability for user to sign into the app, share the
 https://xd.adobe.com/view/1efb68eb-653c-4c8e-9ae6-03cb7d8c3378-4ba8/?fullscreen
 
 #### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 [Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
 
@@ -80,8 +76,7 @@ https://drive.google.com/file/d/1iwTVGhp8d7ZIeQntLyXolCaHKopJWP7p/view?usp=shari
 ***
 
 ## Post-MVP
-- Authentication
-- Separate vistor and Admin page
+- Animations
 ***
 
 ## Code Showcase
