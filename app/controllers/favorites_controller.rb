@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
-  before_action :set_favorite, only: [:show, :update, :destroy]
-
+  before_action :set_favorite, only: [:update, :destroy]
+  before_action :authorize_request, only: [:create]
   # GET /favorites
   def index
     @favorites = Favorite.all
@@ -10,13 +10,16 @@ class FavoritesController < ApplicationController
 
   # GET /favorites/1
   def show
-    render json: @favorite
+    # Get all favorites for user
+    @thought = Thought.find(params[:id])
+    # render json: {thought:@thought, favorites: @.thought.favorites}
+    render json: @thought, include: {favorites: {include: :user}}
   end
 
   # POST /favorites
   def create
     @favorite = Favorite.new(favorite_params)
-
+    @favorite.user = @current_user
     if @favorite.save
       render json: @favorite, status: :created, location: @favorite
     else
