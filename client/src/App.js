@@ -1,10 +1,11 @@
+import Layout from "./layouts/Layout";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <Layout>
       <h1>Waterfall</h1>
-    </div>
+    </Layout>
   );
 }
 
