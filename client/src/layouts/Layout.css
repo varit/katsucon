@@ -39,6 +39,11 @@
 footer {
   background-color: #A2D2FF;
 }
+.green-button,
+.pink-button {
+  height: 54px;
+  width: 155px;
+}
 .green-button {
   background-color: #88FFBF;
 }
