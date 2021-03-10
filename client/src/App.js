@@ -1,12 +1,8 @@
 import Layout from "./layouts/Layout";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  registerUser,
-  removeToken,
-  verifyUser,
-  loginUser,
-} from "./services/auth";
+import { registerUser,removeToken,verifyUser,loginUser } from "./services/auth";
+import SignIn from "./screen/SignIn";
 import "./App.css";
 
 function App() {
@@ -52,7 +48,7 @@ function App() {
         />
         {/* <Redirect exact from="/" to="/login"/> */}
         <Route path="/signup"><h1>Sign Up</h1></Route>
-        <Route path="/login"><h1>Login</h1></Route>
+        <Route path="/login"><SignIn/></Route>
         <Route path="/"><h2>Home</h2></Route>
       </Switch>
     // </Layout>
