@@ -44,8 +44,8 @@ export default function Layout() {
         </form>
       </main>
       <footer>
-        <div>GitHub Logo</div>
-        <div>LinkedIn Logo</div>
+        <div className="green-button">GitHub Logo</div>
+        <div className="pink-button">LinkedIn Logo</div>
         <div>	&#169; Varit Seekhao</div>
       </footer>
     </>
