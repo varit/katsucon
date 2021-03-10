@@ -1,7 +1,20 @@
+* {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .layout-container {
   width: 100vw;
   height: 100vh;
   position: absolute;
+}
+.top-nav,
+.mid-nav,
+.bot-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .top-nav {
   background-color: #CDB4DB;
@@ -23,43 +36,61 @@
 }
 .t-where {
   font-size: 35px;
+  align-self: flex-end;
 }
 .t-thoughts,
 .t-flows {
   font-size: 20px;
 }
+.t-thoughts {
+  align-self: center;
+}
+.t-flows {
+  align-self: flex-start;
+}
+
 .t-sign-in-up {
   font-size: 26px;
+  align-self: center;
 }
 label {
   font-size: 15px;
+  align-self: center;
 }
 .block-one,
 .block-two,
-.block-three {
-  height: 242px;
+.block-three,
+.block-four {
+  min-height: 242px;
+  display: grid;
 }
 .block-one {
   background-color: #61B3FD;
 }
 .block-two {
   background-color: #7FC0FC;
+  
 }
 .block-three {
   background-color: #A2D2FF;
 }
 .block-four {
   background-color: #BDE0FE;
-  min-height: 242px;
 }
 .green-button,
 .pink-button {
   height: 54px;
   width: 155px;
   font-size: 25px;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .green-button {
   background-color: #88FFBF;
+  align-self: flex-end;
+  margin-bottom: 15px;
 }
 .pink-button {
   background-color: #FFAFCC;
@@ -67,4 +98,11 @@ label {
 footer {
   background-color: #A2D2FF;
   font-size: 12px;
+  height: 167px;
+}
+.gh-logo {
+  display: flex;
+}
+.li-logo {
+  display: flex;
 }
