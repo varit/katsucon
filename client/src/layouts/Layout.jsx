@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 export default function Layout(props) {
   const { currentUser } = props;
+  let user = currentUser.username;
+  user = user.charAt(0).toUpperCase() + user.slice(1);
 
   return (
     <div className="layout-container">
       <header>
-        { !currentUser ? <div className="top-nav">Welcome</div> : <div className="top-nav">Welcome, {currentUser.username}</div>}
+        { !currentUser ? <div className="top-nav">Welcome</div> : <div className="top-nav">Welcome, {user}</div>}
         
         <div className="mid-nav">to</div>
         <div className="bot-nav">WaterFall</div>
