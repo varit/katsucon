@@ -37,15 +37,15 @@ export default function Layout() {
           </div>
 
           <div className="block-four">
-            <div>Create</div>
-            <div>Sign In</div>
+            <div className="green-button">Create</div>
+            <div className="pink-button">Sign In</div>
           </div>
 
         </form>
       </main>
       <footer>
-        <div className="green-button">GitHub Logo</div>
-        <div className="pink-button">LinkedIn Logo</div>
+        <div>GitHub Logo</div>
+        <div>LinkedIn Logo</div>
         <div>	&#169; Varit Seekhao</div>
       </footer>
     </>
