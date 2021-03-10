@@ -12,8 +12,8 @@ function App() {
 
   useEffect(() => {
     const handleVerify = async () => {
-      const userData = await verifyUser();
-      setCurrentUser(userData);
+      const currentUser = await verifyUser();
+      setCurrentUser(currentUser);
     };
     handleVerify();
   }, []);
@@ -34,10 +34,11 @@ function App() {
     localStorage.removeItem("authToken");
     removeToken();
     setCurrentUser(null);
+    history.push("/")
   };
 
   return (
-    <Layout currentUser={currentUser}>
+    <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
         <Route
           exact
