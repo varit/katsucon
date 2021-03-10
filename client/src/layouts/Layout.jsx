@@ -11,7 +11,7 @@ export default function Layout() {
         <div>WaterFall</div>
       </header>
       <main>
-        <div>
+        <form>
           <div className="block-one">
             <div>Where</div>
             <div>thoughts</div>
@@ -20,19 +20,19 @@ export default function Layout() {
 
           <div className="block-two">
             <div>Sign Up</div>
-            <div>Username</div>
-            <div>Username Input</div>
-            <div>Password</div>
-            <div>Password Input</div>
+            <label for="username">Username</label>
+            <input type="text" name="username"/>
+            <label for="password">Password</label>
+            <input type="text" name="password"/>
           </div>
 
           <div className="block-three">
-            <div>Confirm Password</div>
-            <div>Confirm Password Input</div>
-            <div>Email</div>
-            <div>Email Input</div>
-            <div>Confirm Email</div>
-            <div>Confirm Email Input</div>
+            <label for="cpassword">Password</label>
+            <input type="text" name="cpassword"/>
+            <label for="email">Email</label>
+            <input type="text" name="email"/>
+            <label for="cemail">Confirm Email</label>
+            <input type="text" name="cemail"/>
           </div>
 
           <div className="block-four">
@@ -40,7 +40,7 @@ export default function Layout() {
             <div>Sign In</div>
           </div>
 
-        </div>
+        </form>
       </main>
       <footer>
         <div>GitHub Logo</div>
