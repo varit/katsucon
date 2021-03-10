@@ -37,9 +37,15 @@ function App() {
   return (
     <Layout currentUser={currentUser}>
       <Switch>
-        <Route path="/login"></Route>
-        <Route path="/signup"></Route>
-        <Route path="/"></Route>
+        <Route path="/login">
+          
+        </Route>
+        <Route path="/signup">
+
+        </Route>
+        <Route path="/">
+
+        </Route>
       </Switch>
     </Layout>
   );
