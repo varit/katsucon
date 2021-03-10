@@ -6,10 +6,14 @@ export default function Login(props) {
     usename: "",
     password: "",
   })
-  const {usename, password} = formData;
+  const {username, password} = formData;
 
   const handleChange = (e) => {
-    
+    const {name, value} = e.target;
+    setFormaData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
   }
   return (
     <div>
@@ -23,14 +27,14 @@ export default function Login(props) {
         <div className="block-two">
           <div className="t-sign-in-up">Sign In</div>
           <label for="username">Username</label>
-          <input type="text" name="username" value={username} onChange={() => {}}/>
+          <input type="text" name="username" value={username} onChange={handleChange}/>
           <label for="password">Password</label>
-          <input type="text" name="password" value={password} onChange={() => {}}/>
+          <input type="password" name="password" value={password} onChange={handleChange}/>
         </div>
 
         <div className="block-four">
-          <div className="green-button">Create</div>
-          <div className="pink-button">Sign In</div>
+          <button className="green-button">Sign In</button>
+          <button className="pink-button">Sign Up</button>
         </div>
       </form>
     </div>
