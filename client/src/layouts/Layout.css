@@ -2,7 +2,6 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  
 }
 .top-nav {
   background-color: #CDB4DB;
@@ -28,6 +27,12 @@
 .t-thoughts,
 .t-flows {
   font-size: 20px;
+}
+.t-sign-in-up {
+  font-size: 26px;
+}
+label {
+  font-size: 15px;
 }
 .block-one,
 .block-two,

@@ -20,7 +20,7 @@ export default function Layout() {
           </div>
 
           <div className="block-two">
-            <div>Sign Up</div>
+            <div className="t-sign-in-up">Sign Up</div>
             <label for="username">Username</label>
             <input type="text" name="username"/>
             <label for="password">Password</label>
