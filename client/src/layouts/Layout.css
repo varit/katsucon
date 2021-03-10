@@ -1,3 +1,7 @@
+.layout-container {
+  width: 100vw;
+  height: 100vh;
+}
 .top-nav {
   background-color: #CDB4DB;
 }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Layout() {
   return (
-    <>
+    <div className="layout-container">
       <header>
         {/* { !currentUser ? <div>Welcome</div> : <div>userName</div>} */}
         <div className="top-nav">Welcome</div>
@@ -48,6 +48,6 @@ export default function Layout() {
         <div>LinkedIn Logo</div>
         <div>	&#169; Varit Seekhao</div>
       </footer>
-    </>
+    </div>
   )
 }
