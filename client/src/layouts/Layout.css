@@ -56,6 +56,7 @@ label {
 .pink-button {
   height: 54px;
   width: 155px;
+  font-size: 25px;
 }
 .green-button {
   background-color: #88FFBF;
@@ -65,4 +66,5 @@ label {
 }
 footer {
   background-color: #A2D2FF;
+  font-size: 12px;
 }
