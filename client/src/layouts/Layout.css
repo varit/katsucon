@@ -18,6 +18,11 @@
 .sides-bg {
   background-color: #88FFBF;
 }
+.block-one,
+.block-two,
+.block-three {
+  height: 242px;
+}
 .block-one {
   background-color: #61B3FD;
 }
@@ -29,6 +34,7 @@
 }
 .block-four {
   background-color: #BDE0FE;
+  min-height: 242px;
 }
 footer {
   background-color: #A2D2FF;
