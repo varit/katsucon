@@ -1,7 +1,7 @@
 import Layout from "./layouts/Layout";
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { registerUser,removeToken,verifyUser,loginUser } from "./services/auth";
+import { registerUser, removeToken, verifyUser, loginUser } from "./services/auth";
 import SignIn from "./screen/SignIn/SignIn.jsx";
 import SignUp from "./screen/SignUp/SignUp.jsx";
 import "./App.css";
@@ -24,9 +24,10 @@ function App() {
     history.push("/");
   };
 
-  const registerSubmit = async (registerData) => {
-    const userData = await registerUser(registerData);
-    setCurrentUser(userData);
+  const handleSignUp = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(currentUser);
+    history.push("/");
   };
 
   const handleLogout = () => {
@@ -50,7 +51,7 @@ function App() {
           }}
         />
         {/* <Redirect exact from="/" to="/signin"/> */}
-        <Route path="/signup"><SignUp/></Route>
+        <Route path="/signup"><SignUp handleSignUp={handleSignUp}/></Route>
         <Route path="/signin"><SignIn handleSignIn={handleSignIn}/></Route>
         <Route exact path="/"><h2>Home</h2></Route>
       </Switch>

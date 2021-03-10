@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function SignUp() {
+export default function SignUp(props) {
   const [formData, setFormaData] = useState({
-    usename: "",
+    username: "",
     password: "",
     cpassword: "",
     email: "",
     cemail: "",
   });
   const { username, password, cpassword, email, cemail } = formData;
+  const { handleSignUp } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +22,10 @@ export default function SignUp() {
   
   return (
     <div>
-      <form className="sides-bg">
+      <form className="sides-bg" onSubmit={(e) => {
+        e.preventDefault();
+        handleSignUp(formData);
+      }}>
         <div className="block-one">
           <div className="t-where">Where</div>
           <div className="t-thoughts">thoughts</div>

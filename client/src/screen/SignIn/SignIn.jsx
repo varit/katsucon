@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Login(props) {
+export default function SignIn(props) {
   const [formData, setFormaData] = useState({
-    usename: "",
+    username: "",
     password: "",
   });
   const { username, password } = formData;
