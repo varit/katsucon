@@ -2,12 +2,14 @@ import React from 'react'
 import "./Layout.css";
 import { Link } from "react-router-dom";
 
-export default function Layout() {
+export default function Layout(props) {
+  const { currentUser } = props;
+
   return (
     <div className="layout-container">
       <header>
-        {/* { !currentUser ? <div>Welcome</div> : <div>userName</div>} */}
-        <div className="top-nav">Welcome</div>
+        { !currentUser ? <div className="top-nav">Welcome</div> : <div className="top-nav">currentUser.name</div>}
+        
         <div className="mid-nav">to</div>
         <div className="bot-nav">WaterFall</div>
       </header>
