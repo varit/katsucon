@@ -1,22 +1,29 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ThoughtCreate() {
-  const[formData, setFormData] = useState({
-    comment: ""
+  const [formData, setFormData] = useState({
+    thought: "",
   });
-  const { comment } = formData;
+  const { thought } = formData;
 
   const handleChange = (e) => {
-    const { comment, value } = e.target;
-    setFormaData((prevState) => ({
+    const { thought, value } = e.target;
+    setFormData((prevState) => ({
       ...prevState,
-      [comment]: value,
+      [thought]: value
     }));
   };
 
   return (
-    <div>
-      
-    </div>
-  )
+    <form>
+      <label for="thought">Thought</label>
+      <input
+        type="text"
+        name="thought"
+        value={thought}
+        onChange={handleChange}
+      />
+      <button>Create Thought</button>
+    </form>
+  );
 }
