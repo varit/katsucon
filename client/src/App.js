@@ -1,5 +1,5 @@
 import Layout from "./layouts/Layout";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { registerUser,removeToken,verifyUser,loginUser } from "./services/auth";
 import SignIn from "./screen/SignIn/SignIn.jsx";
@@ -8,6 +8,7 @@ import "./App.css";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -20,6 +21,7 @@ function App() {
   const handleSignIn = async (formData) => {
     const currentUser = await loginUser(formData);
     setCurrentUser(currentUser);
+    history.push("/");
   };
 
   const registerSubmit = async (registerData) => {
