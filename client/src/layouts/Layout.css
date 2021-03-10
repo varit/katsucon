@@ -2,18 +2,22 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
+  
 }
 .top-nav {
   background-color: #CDB4DB;
   height: 73px;
+  font-size: 50px;
 }
 .mid-nav {
   background-color: #FFAFCC;
   height: 33px;
+  font-size: 20px;
 }
 .bot-nav {
   background-color: #FFC8DD;
   height: 41px;
+  font-size: 37px;
 }
 .sides-bg {
   background-color: #88FFBF;
@@ -36,9 +40,6 @@
   background-color: #BDE0FE;
   min-height: 242px;
 }
-footer {
-  background-color: #A2D2FF;
-}
 .green-button,
 .pink-button {
   height: 54px;
@@ -49,4 +50,7 @@ footer {
 }
 .pink-button {
   background-color: #FFAFCC;
+}
+footer {
+  background-color: #A2D2FF;
 }
