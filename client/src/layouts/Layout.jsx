@@ -14,7 +14,7 @@ export default function Layout(props) {
         <div className="bot-nav">WaterFall</div>
       </header>
       <main>
-        
+
       </main>
       <footer>
         <div className="gh-logo">GitHub Logo</div>
