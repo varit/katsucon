@@ -7,9 +7,9 @@ export default function Layout() {
     <>
       <header>
         {/* { !currentUser ? <div>Welcome</div> : <div>userName</div>} */}
-        <div>Welcome</div>
-        <div>to</div>
-        <div>WaterFall</div>
+        <div className="top-nav">Welcome</div>
+        <div className="mid-nav">to</div>
+        <div className="bot-nav">WaterFall</div>
       </header>
       <main>
         <form>
