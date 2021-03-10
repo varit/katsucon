@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { registerUser, removeToken, verifyUser, loginUser } from "./services/auth";
 import SignIn from "./screen/SignIn/SignIn.jsx";
 import SignUp from "./screen/SignUp/SignUp.jsx";
+// import Timeline from "./screen/Timeline/Timeline.jsx"
+import MainContainer from "./containers/MainContainer";
+
 import "./App.css";
 
 function App() {
@@ -25,7 +28,7 @@ function App() {
   };
 
   const handleSignUp = async (formData) => {
-    const userData = await registerUser(formData);
+    const currentUser = await registerUser(formData);
     setCurrentUser(currentUser);
     history.push("/");
   };
@@ -54,7 +57,7 @@ function App() {
         {/* <Redirect exact from="/" to="/signin"/> */}
         <Route path="/signup"><SignUp handleSignUp={handleSignUp}/></Route>
         <Route path="/signin"><SignIn handleSignIn={handleSignIn}/></Route>
-        <Route exact path="/"><h2>Home</h2></Route>
+        <Route path="/timeline"><MainContainer/></Route>
       </Switch>
     </Layout>
   );

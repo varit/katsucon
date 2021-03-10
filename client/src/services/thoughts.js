@@ -1,11 +1,11 @@
 import api from "./api-config";
 
 export const getAllThoughts = async () => {
-  const resp = await api.get("/favorites");
+  const resp = await api.get("/thoughts");
   return resp.data;
 }
 
-export const getOneThought = async () => {
+export const getOneThought = async (id) => {
   const resp = await api.get(`/thoughts/${id}`);
   return resp.data;
 }

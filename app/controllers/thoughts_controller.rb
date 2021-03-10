@@ -5,7 +5,7 @@ class ThoughtsController < ApplicationController
   def index
     @thoughts = Thought.all
 
-    render json: @thoughts
+    render json: @thoughts, include: :user
   end
 
   # GET /thoughts/1
