@@ -1,17 +1,21 @@
 .layout-container {
   width: 100vw;
   height: 100vh;
+  position: absolute;
 }
 .top-nav {
   background-color: #CDB4DB;
+  height: 73px;
 }
 .mid-nav {
   background-color: #FFAFCC;
+  height: 33px;
 }
 .bot-nav {
   background-color: #FFC8DD;
+  height: 41px;
 }
-.main-bg {
+.sides-bg {
   background-color: #88FFBF;
 }
 .block-one {
