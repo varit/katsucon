@@ -8,7 +8,7 @@ export default function Layout(props) {
   return (
     <div className="layout-container">
       <header>
-        { !currentUser ? <div className="top-nav">Welcome</div> : <div className="top-nav">currentUser.name</div>}
+        {/* { !currentUser ? <div className="top-nav">Welcome</div> : <div className="top-nav">currentUser.name</div>} */}
         
         <div className="mid-nav">to</div>
         <div className="bot-nav">WaterFall</div>
