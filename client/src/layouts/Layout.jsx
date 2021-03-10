@@ -12,19 +12,21 @@ export default function Layout() {
       </header>
       <main>
         <div>
-          <div>
+          <div className="block-one">
             <div>Where</div>
             <div>thoughts</div>
             <div>flows...</div>
           </div>
-          <div>
+
+          <div className="block-two">
             <div>Sign Up</div>
             <div>Username</div>
             <div>Username Input</div>
             <div>Password</div>
             <div>Password Input</div>
           </div>
-          <div>
+
+          <div className="block-three">
             <div>Confirm Password</div>
             <div>Confirm Password Input</div>
             <div>Email</div>
@@ -32,10 +34,12 @@ export default function Layout() {
             <div>Confirm Email</div>
             <div>Confirm Email Input</div>
           </div>
-          <div>
+
+          <div className="block-four">
             <div>Create</div>
             <div>Sign In</div>
           </div>
+
         </div>
       </main>
       <footer>

@@ -5,7 +5,6 @@ import './App.css';
 function App() {
   return (
     <Layout>
-      <h1>Waterfall</h1>
     </Layout>
   );
 }
