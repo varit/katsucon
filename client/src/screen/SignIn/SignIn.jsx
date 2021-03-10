@@ -7,6 +7,7 @@ export default function Login(props) {
     password: "",
   });
   const { username, password } = formData;
+  const { handleSignIn } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +19,10 @@ export default function Login(props) {
   
   return (
     <div>
-      <form className="sides-bg">
+      <form className="sides-bg" onSubmit= {(e) => {
+        e.preventDefault();
+        handleSignIn(formData);
+      }}>
         <div className="block-one">
           <div className="t-where">Where</div>
           <div className="t-thoughts">thoughts</div>

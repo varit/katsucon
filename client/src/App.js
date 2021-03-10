@@ -17,9 +17,9 @@ function App() {
     handleVerify();
   }, []);
 
-  const loginSubmit = async (registerData) => {
-    const userData = await loginUser(registerData);
-    setCurrentUser(userData);
+  const handleSignIn = async (formData) => {
+    const currentUser = await loginUser(formData);
+    setCurrentUser(currentUser);
   };
 
   const registerSubmit = async (registerData) => {
@@ -49,7 +49,7 @@ function App() {
         />
         {/* <Redirect exact from="/" to="/signin"/> */}
         <Route path="/signup"><SignUp/></Route>
-        <Route path="/signin"><SignIn/></Route>
+        <Route path="/signin"><SignIn handleSignIn={handleSignIn}/></Route>
         <Route exact path="/"><h2>Home</h2></Route>
       </Switch>
     </Layout>
