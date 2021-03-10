@@ -12,7 +12,7 @@ export default function Layout() {
         <div className="bot-nav">WaterFall</div>
       </header>
       <main>
-        <form>
+        <form className="main-bg">
           <div className="block-one">
             <div>Where</div>
             <div>thoughts</div>
