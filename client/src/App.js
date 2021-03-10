@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { registerUser,removeToken,verifyUser,loginUser } from "./services/auth";
 import SignIn from "./screen/SignIn/SignIn.jsx";
+import SignUp from "./screen/SignUp/SignUp.jsx";
 import "./App.css";
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
           }}
         />
         {/* <Redirect exact from="/" to="/signin"/> */}
-        <Route path="/signup"><h1>Sign Up</h1></Route>
+        <Route path="/signup"><SignUp/></Route>
         <Route path="/signin"><SignIn/></Route>
         <Route exact path="/"><h2>Home</h2></Route>
       </Switch>
