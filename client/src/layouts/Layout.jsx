@@ -33,8 +33,8 @@ export default function Layout() {
             <div>Confirm Email Input</div>
           </div>
           <div>
-            <Link>Create Button</Link>
-            <Link>Sign In</Link>
+            <div>Create</div>
+            <div>Sign In</div>
           </div>
         </div>
       </main>
