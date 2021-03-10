@@ -14,9 +14,9 @@ export default function Layout() {
       <main>
         <form className="sides-bg">
           <div className="block-one">
-            <div>Where</div>
-            <div>thoughts</div>
-            <div>flows...</div>
+            <div className="t-where">Where</div>
+            <div className="t-thoughts">thoughts</div>
+            <div className="t-flows">flows...</div>
           </div>
 
           <div className="block-two">
