@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export default function ThoughtCreate(props) {
   const [formData, setFormData] = useState({
-    name: "",
+    comment: "",
   });
-  const { name } = formData;
+  const { comment } = formData;
   const { handleCreate } = props;
 
   const handleChange = (e) => {
@@ -21,11 +21,11 @@ export default function ThoughtCreate(props) {
       e.preventDefault();
       handleCreate(formData)
     }}>
-      <label for="name">Thought:</label>
+      <label for="comment">Thought:</label>
       <input
         type="text"
-        name="name"
-        value={name}
+        name="comment"
+        value={comment}
         onChange={handleChange}
       />
       <button>Create Thought</button>
