@@ -110,7 +110,7 @@ label {
   margin-bottom: 15px;
 }
 .green-button:hover {
-  
+  cursor: pointer;
 }
 .pink-button {
   background-color: #FFAFCC;
