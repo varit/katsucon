@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import { getAllThoughts, postThought } from "../services/thoughts";
+import { destroyThought, getAllThoughts, postThought } from "../services/thoughts";
 import Timeline from "../screen/Timeline/Timeline.jsx";
 import ThoughtCreate from "../screen/ThoughtCreate/ThoughtCreate";
 
@@ -21,6 +21,11 @@ export default function MainContainer() {
       setThoughts(prevState => [...prevState, newThought]);
       history.push("/timeline")
     }
+
+    const handleDelete = async (id) => {
+      await destroyThought(id);
+      setThoughts(prevState => prevState.filter((thought) => thought.id !== id))
+    }
   return (
     <Switch>
       <Route path="/thoughts/new">
@@ -28,8 +33,7 @@ export default function MainContainer() {
       </Route>
 
       <Route path="/timeline">
-        <Timeline thoughts={thoughts}
-        />
+        <Timeline thoughts={thoughts} handleDelete={handleDelete}/>
       </Route>
     </Switch>
   )

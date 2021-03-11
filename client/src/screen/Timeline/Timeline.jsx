@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Timeline(props) {
-  const { thoughts } = props;
+  const { thoughts, handleDelete } = props;
 
   return (
     <div>
@@ -10,7 +10,7 @@ export default function Timeline(props) {
         <div key={thought.id}>
           <div>{thought.user.username}</div>
           <div>{thought.comment}</div>
-          <button>Delete</button>
+          <button onClick={() => handleDelete(thought.id)}>Delete</button>
         </div>
       ))}
     </div>
