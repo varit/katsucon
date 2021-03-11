@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-export default function ThoughtCreate() {
+export default function ThoughtCreate(props) {
   const [formData, setFormData] = useState({
     thought: "",
   });
   const { thought } = formData;
+  const { handleCreate } = props;
 
   const handleChange = (e) => {
     const { thought, value } = e.target;
@@ -15,8 +16,12 @@ export default function ThoughtCreate() {
   };
 
   return (
-    <form>
-      <label for="thought">Thought</label>
+    <div>
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      handleCreate(formData)
+    }}>
+      <label for="thought">Thought:</label>
       <input
         type="text"
         name="thought"
@@ -25,5 +30,6 @@ export default function ThoughtCreate() {
       />
       <button>Create Thought</button>
     </form>
+    </div>
   );
 }

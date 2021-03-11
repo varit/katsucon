@@ -57,7 +57,7 @@ function App() {
         {/* <Redirect exact from="/" to="/signin"/> */}
         <Route path="/signup"><SignUp handleSignUp={handleSignUp}/></Route>
         <Route path="/signin"><SignIn handleSignIn={handleSignIn}/></Route>
-        <Route path="/timeline"><MainContainer/></Route>
+        <Route path="/"><MainContainer/></Route>
       </Switch>
     </Layout>
   );

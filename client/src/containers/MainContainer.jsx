@@ -25,9 +25,9 @@ export default function MainContainer() {
       <Route path="/thoughts/new">
         <ThoughtCreate handleCreate={handleCreate}/>
       </Route>
+
       <Route path="/timeline">
-        <Timeline
-          thoughts={thoughts}
+        <Timeline thoughts={thoughts}
         />
       </Route>
     </Switch>
