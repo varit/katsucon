@@ -18,7 +18,7 @@ class ThoughtsController < ApplicationController
     @thought = Thought.new(thought_params)
     @thought.user = @current_user
     if @thought.save
-      render json: @thought, status: :created, location: @thought
+      render json: @thought, include: :user, status: :created, location: @thought
     else
       render json: @thought.errors, status: :unprocessable_entity
     end
