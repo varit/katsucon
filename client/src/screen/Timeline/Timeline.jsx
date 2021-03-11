@@ -10,7 +10,7 @@ export default function Timeline(props) {
 
   return (
     <div className="waterfall">
-      <div>
+      <div className="add">
         <Link to="/thoughts/new">
           <img src={addIcon} alt="add"/>
         </Link>
