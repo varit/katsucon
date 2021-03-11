@@ -10,9 +10,12 @@ import Timeline from "../screen/Timeline/Timeline.jsx";
 import ThoughtCreate from "../screen/ThoughtCreate/ThoughtCreate";
 import ThoughtEdit from "../screen/ThoughtEdit/ThoughtEdit";
 
-export default function MainContainer() {
+import { postFavorite } from "../services/favorites";
+
+export default function MainContainer(props) {
   const [thoughts, setThoughts] = useState([]);
   const history = useHistory();
+  const { currentUser } = props;
 
   useEffect(() => {
     const fetchThoughts = async () => {
@@ -22,6 +25,14 @@ export default function MainContainer() {
     fetchThoughts();
   }, []);
 
+  const handleFavorite = async (favoriteData) => {
+    const newThought = await postFavorite(favoriteData);
+    setThoughts((prevState) =>
+      prevState.map((thought) => {
+        return thought.id === newThought.id ? newThought : thought;
+      })
+    );
+  };
   const handleCreate = async (formData) => {
     const newThought = await postThought(formData);
     setThoughts((prevState) => [...prevState, newThought]);
@@ -37,21 +48,23 @@ export default function MainContainer() {
 
   const handleUpdate = async (id, formData) => {
     const updatedThought = await putThought(id, formData);
-    setThoughts(prevState => prevState.map((thought) => {
-      return thought.id === Number(id) ? updatedThought : thought
-    }))
+    setThoughts((prevState) =>
+      prevState.map((thought) => {
+        return thought.id === Number(id) ? updatedThought : thought;
+      })
+    );
     history.push("/timeline");
-  }
+  };
   return (
     <Switch>
       <Route path="/thoughts/new">
         <ThoughtCreate handleCreate={handleCreate} />
       </Route>
       <Route path="/thoughts/:id/edit">
-        <ThoughtEdit thoughts={thoughts} handleUpdate={handleUpdate}/>
+        <ThoughtEdit thoughts={thoughts} handleUpdate={handleUpdate} />
       </Route>
       <Route path="/timeline">
-        <Timeline thoughts={thoughts} handleDelete={handleDelete} />
+        <Timeline thoughts={thoughts} handleDelete={handleDelete} handleFavorite={handleFavorite} currentUser={currentUser}/>
       </Route>
     </Switch>
   );

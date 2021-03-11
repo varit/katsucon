@@ -20,7 +20,7 @@ export default function ThoughtEdit(props) {
     if (thoughts.length){
       prefillFormData();
     }
-  }, [thoughts])
+  }, [id, thoughts])
 
   const handleChange = (e) => {
     const { name, value } = e.target;

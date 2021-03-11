@@ -1,0 +1,11 @@
+input {
+  border: none;
+  border-radius: 20px;
+  width: 267px;
+  height: 30px;
+  display: flex;
+  justify-self: center;
+}
+textarea:focus, input:focus {
+  outline: none;
+}
