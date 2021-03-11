@@ -21,3 +21,18 @@
   position: relative;
   left: 0;
 }
+.add {
+  /* position: relative;
+  right: 0; */
+}
+
+@media only screen and (max-width: 1300px) {
+  .waterfall {
+    background-image: linear-gradient(#61B3FD, #db0000);
+  }
+}
+@media only screen and (max-width: 1000px){
+  .waterfall {
+    background-image: linear-gradient(#61B3FD, #BDE0FE);
+  }
+}

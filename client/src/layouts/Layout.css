@@ -26,6 +26,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
 }
 .top-nav {
   background-color: #CDB4DB;
@@ -49,11 +50,13 @@ button:focus {
   font-size: 35px;
   align-self: flex-end;
   text-align: center;
+  color: #ffffff;
 }
 .t-thoughts,
 .t-flows {
   font-size: 20px;
   text-align: center;
+  color: #ffffff;
 }
 .t-thoughts {
   align-self: center;
@@ -66,11 +69,13 @@ button:focus {
   font-size: 26px;
   align-self: center;
   text-align: center;
+  color: #ffffff;
 }
 label {
   font-size: 15px;
   align-self: center;
   text-align: center;
+  color: #ffffff;
 }
 .block-one,
 .block-two,
@@ -125,9 +130,11 @@ footer {
 }
 .gh-logo {
   display: flex;
+  margin: auto;
 }
 .li-logo {
   display: flex;
+  margin: auto;
 }
 .logout {
   position: absolute;
