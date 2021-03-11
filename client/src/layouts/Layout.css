@@ -3,6 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  /* color: #ffffff; */
+}
+a,
+button {
+  color: #ffffff;
+}
+button:focus {
+  outline: none;
 }
 .layout-container {
   width: 100vw;
@@ -88,7 +97,8 @@ label {
   align-items: center;
 }
 .green-button {
-  background-color: #88FFBF;
+  border: none;
+  background-color: #00FECE;
   align-self: flex-end;
   margin-bottom: 15px;
 }
