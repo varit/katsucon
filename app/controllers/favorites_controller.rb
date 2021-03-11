@@ -20,8 +20,9 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new(favorite_params)
     @favorite.user = @current_user
+    @thought = @favorite.thought
     if @favorite.save
-      render json: @favorite, status: :created, location: @favorite
+      render json: @thought, include: [:user, :favorites], status: :created, location: @favorite
     else
       render json: @favorite.errors, status: :unprocessable_entity
     end

@@ -1,10 +1,12 @@
 * {
-  text-align: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  /* color: #ffffff; */
+}
+input {
+  padding-left: 20px;
+  font-size: 20px;
 }
 a,
 button {
@@ -40,16 +42,18 @@ button:focus {
   height: 41px;
   font-size: 37px;
 }
-.sides-bg {
+.sides {
   background-color: #88FFBF;
 }
 .t-where {
   font-size: 35px;
   align-self: flex-end;
+  text-align: center;
 }
 .t-thoughts,
 .t-flows {
   font-size: 20px;
+  text-align: center;
 }
 .t-thoughts {
   align-self: center;
@@ -61,10 +65,12 @@ button:focus {
 .t-sign-in-up {
   font-size: 26px;
   align-self: center;
+  text-align: center;
 }
 label {
   font-size: 15px;
   align-self: center;
+  text-align: center;
 }
 .block-one,
 .block-two,
@@ -91,6 +97,7 @@ label {
   height: 54px;
   width: 155px;
   font-size: 25px;
+  font-weight: 400;
   justify-self: center;
   display: flex;
   justify-content: center;
@@ -102,10 +109,16 @@ label {
   align-self: flex-end;
   margin-bottom: 15px;
 }
+.green-button:hover {
+  
+}
 .pink-button {
   background-color: #FFAFCC;
 }
 footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
   background-color: #A2D2FF;
   font-size: 12px;
   height: 167px;
@@ -115,4 +128,19 @@ footer {
 }
 .li-logo {
   display: flex;
+}
+.logout {
+  position: absolute;
+  right: 50px;
+  font-size: 20px;
+}
+.logout:hover {
+  cursor: pointer;
+}
+.delete {
+  display: inline-block;
+
+}
+.delete:hover {
+  cursor: pointer;
 }

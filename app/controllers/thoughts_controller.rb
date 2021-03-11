@@ -5,7 +5,7 @@ class ThoughtsController < ApplicationController
   def index
     @thoughts = Thought.all
 
-    render json: @thoughts, include: :user
+    render json: @thoughts, include: [:user, :favorites]
   end
 
   # GET /thoughts/1
@@ -18,7 +18,7 @@ class ThoughtsController < ApplicationController
     @thought = Thought.new(thought_params)
     @thought.user = @current_user
     if @thought.save
-      render json: @thought, include: :user, status: :created, location: @thought
+      render json: @thought, include: [:user, :favorites], status: :created, location: @thought
     else
       render json: @thought.errors, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class ThoughtsController < ApplicationController
   def update
     @thought = @current_user.thoughts.find(params[:id])
     if @thought.update(thought_params)
-      render json: @thought
+      render json: @thought, include: [:user, :favorites]
     else
       render json: @thought.errors, status: :unprocessable_entity
     end

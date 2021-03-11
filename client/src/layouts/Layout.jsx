@@ -5,7 +5,7 @@ import "./Layout.css";
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   let user = "";
-  if(currentUser){
+  if (currentUser) {
     user = currentUser.username;
     user = user.charAt(0).toUpperCase() + user.slice(1);
   }
@@ -17,16 +17,14 @@ export default function Layout(props) {
           <div className="top-nav">Welcome</div>
         ) : (
           <>
-            <div className="top-nav">Welcome, {user} </div>
-            <button onClick={handleLogout}>Logout</button>
+            <div className="top-nav">Welcome, {user} <div className="logout" onClick={handleLogout}>Logout</div></div>
           </>
         )}
 
         <div className="mid-nav">to</div>
         <div className="bot-nav">WaterFall</div>
       </header>
-
-        <main>{props.children}</main>
+      <div className="sides">{props.children}</div>
 
       <footer>
         <div className="gh-logo">GitHub Logo</div>

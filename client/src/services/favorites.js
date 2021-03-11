@@ -5,7 +5,7 @@ export const getAllFavorites = async () => {
   return resp.data;
 }
 
-export const getFavorite = async () => {
+export const getFavorite = async (id) => {
   const resp = await api.get(`/favorites/${id}`);
   return resp.data;
 }
