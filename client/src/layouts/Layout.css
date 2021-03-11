@@ -130,9 +130,11 @@ footer {
 }
 .gh-logo {
   display: flex;
+  margin: auto;
 }
 .li-logo {
   display: flex;
+  margin: auto;
 }
 .logout {
   position: absolute;
