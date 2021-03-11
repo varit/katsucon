@@ -14,7 +14,7 @@ export default function Layout(props) {
     <div className="layout-container">
       <header>
         {!currentUser ? (
-          <div className="top-nav">Welcome</div>
+          <h1 className="top-nav">Welcome</h1>
         ) : (
           <>
             <div className="top-nav">Welcome, {user} <div className="logout" onClick={handleLogout}>Logout</div></div>
