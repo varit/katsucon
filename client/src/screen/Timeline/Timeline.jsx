@@ -10,6 +10,7 @@ export default function Timeline(props) {
         <div key={thought.id}>
           <div>{thought.user.username}</div>
           <div>{thought.comment}</div>
+          <button>Delete</button>
         </div>
       ))}
     </div>

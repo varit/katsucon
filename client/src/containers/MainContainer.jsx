@@ -1,11 +1,12 @@
-import { useState, useEffect, useHistory } from "react";
-import { Switch, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { getAllThoughts, postThought } from "../services/thoughts";
 import Timeline from "../screen/Timeline/Timeline.jsx";
 import ThoughtCreate from "../screen/ThoughtCreate/ThoughtCreate";
 
 export default function MainContainer() {
   const [thoughts, setThoughts] = useState([]);
+  const history = useHistory();
 
     useEffect(() => {
       const fetchThoughts = async () => {
@@ -18,7 +19,7 @@ export default function MainContainer() {
     const handleCreate = async (formData) => {
       const newThought = await postThought(formData);
       setThoughts(prevState => [...prevState, newThought]);
-      useHistory.push("/timeline")
+      history.push("/timeline")
     }
   return (
     <Switch>
